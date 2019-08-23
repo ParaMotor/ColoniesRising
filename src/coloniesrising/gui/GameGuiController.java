@@ -21,6 +21,7 @@ public class GameGuiController implements Initializable {
 	Button buttonSlow = new Button();
 	Button buttonFast = new Button();
 	Button buttonPlay = new Button();
+	Button buttonDebugPlanets = new Button();
 
 	public void initialize(URL url, ResourceBundle rb) {
 		
@@ -31,7 +32,10 @@ public class GameGuiController implements Initializable {
 		labelMoney.setId("labelMoney");
 		
 		buttonStop.setId("buttonStop");		
-		buttonPlay.setId("buttonPlay");			
+		buttonPlay.setId("buttonPlay");	
+		buttonSlow.setId("buttonSlow");
+		buttonFast.setId("buttonFast");
+		buttonDebugPlanets.setId("buttonDebugPlanets");
 	}
 	
 	public void eventStop(ActionEvent event) {
@@ -44,6 +48,34 @@ public class GameGuiController implements Initializable {
 	public void eventPlay(ActionEvent event) {
 		
 		coloniesrising.main.GameClock.gameClock();
+		
+	}
+	
+	public void eventSlow(ActionEvent event) {
+		
+		coloniesrising.main.GameClock.delay = coloniesrising.main.GameClock.slow;
+		
+	}
+	
+	public void eventFast(ActionEvent event) {
+		
+		coloniesrising.main.GameClock.delay = coloniesrising.main.GameClock.fast;
+		
+	}
+	
+	public void eventDebugPlanets(ActionEvent event) {
+		
+		for (int i = 0; i <= coloniesrising.main.Main.planetCount; i++) {
+			
+			System.out.println(String.valueOf(coloniesrising.main.Expedition.planet[i].ammountCoal[0]));
+			
+		}
+		
+	}
+	
+	public void eventExpedition(ActionEvent event) {
+		
+		coloniesrising.main.Expedition.expedition();
 		
 	}
 		

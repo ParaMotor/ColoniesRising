@@ -31,7 +31,10 @@
             </Tab>
             <Tab text="Expedition Hub">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="buttonExpedition" layoutX="239.0" layoutY="180.0" mnemonicParsing="false" onAction="#eventExpedition" text="Begin Expedition" />
+                     </children></AnchorPane>
               </content>
             </Tab>
             <Tab text="Market">
@@ -39,7 +42,7 @@
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
               </content>
             </Tab>
-            <Tab text="AsPl Market">
+            <Tab text="Asteroid Market">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
               </content>
@@ -53,10 +56,11 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Button fx:id="buttonSlow" layoutX="180.0" layoutY="101.0" mnemonicParsing="false" text="Slow" />
+                        <Button fx:id="buttonSlow" layoutX="180.0" layoutY="101.0" mnemonicParsing="false" onAction="#eventSlow" text="Slow" />
                         <Button fx:id="buttonStop" layoutX="139.0" layoutY="101.0" mnemonicParsing="false" onAction="#eventStop" text="Stop" />
-                        <Button fx:id="buttonFast" layoutX="221.0" layoutY="101.0" mnemonicParsing="false" text="Fast" />
+                        <Button fx:id="buttonFast" layoutX="221.0" layoutY="101.0" mnemonicParsing="false" onAction="#eventFast" text="Fast" />
                         <Button fx:id="buttonPlay" layoutX="101.0" layoutY="101.0" mnemonicParsing="false" onAction="#eventPlay" text="Play" />
+                        <Button fx:id="buttonDebugPlanets" layoutX="476.0" layoutY="202.0" mnemonicParsing="false" onAction="#eventDebugPlanets" text="debugPlanets" />
                      </children>
                   </AnchorPane>
               </content>

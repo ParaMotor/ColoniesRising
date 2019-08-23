@@ -7,14 +7,16 @@ import coloniesrising.main.Main;
 import javafx.application.Platform;
 
 public class GameClock {
+	
+	public static final int slow = 2000;
+	public static final int fast = 500;
+	public static long delay = slow;
 
 	public static void gameClock() {
 			
 			final int slow = 2000;
 			final int fast = 500;
 			long delay = slow;
-			long startTime;
-			long endTime;
 			Timer gameSpeed = new Timer();
 			
 			TimerTask gameGlock = new TimerTask() {
