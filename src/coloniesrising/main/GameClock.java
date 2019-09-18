@@ -28,8 +28,24 @@ public class GameClock {
 							Main.day++;
 						}
 						coloniesrising.gui.GameGuiController.changingDate.setValue(String.valueOf(Main.day));
+						coloniesrising.gui.GameGuiController.changingMoney.setValue(String.valueOf(Main.money));
+						
+						System.out.println(String.valueOf(coloniesrising.main.Main.planetCount));
+						System.out.println(String.valueOf(coloniesrising.main.Main.asteroidCount));
+						
+						if (Main.day % 30 == 0) {
+							
+							for (int i = 0; i <= coloniesrising.main.Main.planetCount; i++) {
+								
+								Planet.endOfMonth();
+								
+							}
+							
+						}
+						
 					});
 				};
+				
 			};
 			
 			gameSpeed.scheduleAtFixedRate(gameGlock, 0, delay);
